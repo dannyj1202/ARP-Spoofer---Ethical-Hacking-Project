@@ -9,6 +9,9 @@ on networks you own or are explicitly authorized to test.
 It does NOT capture, inspect, log, or store any intercepted traffic. It only
 performs the ARP poisoning and restores the network to its original state on
 exit.
+
+Author:  dannyj1202
+License: MIT (see the LICENSE file)
 """
 
 from __future__ import annotations

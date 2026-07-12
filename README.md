@@ -18,6 +18,7 @@ defense.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Sample Output](#sample-output)
+- [Testing](#testing)
 - [Legal / Ethical Use](#legal--ethical-use)
 - [What I Learned / Skills Demonstrated](#what-i-learned--skills-demonstrated)
 - [License](#license)
@@ -203,6 +204,32 @@ error: argument -t/--target: '999.999.1.1' is not a valid IP address
 $ sudo ./arp_spoofer.py -t 192.168.1.250 --i-am-authorized
 14:21:10 [ERROR] Could not resolve a MAC for the target (192.168.1.250).
                  Is it online and on the same subnet as this machine?
+```
+
+---
+
+## Testing
+
+The test suite mocks Scapy entirely, so it **never sends a single packet** and
+is completely safe to run on any network (including public Wi-Fi). It covers
+input validation, argument parsing, MAC resolution and retries, gateway
+detection, spoof/restore packet construction, the root check, the authorization
+gate, and IP-forwarding management.
+
+```bash
+# Install dev dependencies (pytest + scapy)
+pip install -r requirements-dev.txt
+
+# Run the suite
+pytest -v
+```
+
+Layout:
+
+```
+tests/
+  conftest.py           # stubs Scapy in sys.modules before import (zero packets)
+  test_arp_spoofer.py   # unit tests for the pure logic
 ```
 
 ---
