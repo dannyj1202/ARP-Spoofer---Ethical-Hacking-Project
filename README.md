@@ -122,8 +122,8 @@ and **root** privileges.
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/arp-spoofer-mitm.git
-cd arp-spoofer-mitm
+git clone https://github.com/dannyj1202/ARP-Spoofer---Ethical-Hacking-Project.git
+cd ARP-Spoofer---Ethical-Hacking-Project
 
 # 2. (Recommended) create a virtual environment
 python3 -m venv .venv
@@ -247,5 +247,10 @@ confirmation, no traffic storage) are deterrents, **not** legal cover.
 
 ## License
 
-Released under the [MIT License](LICENSE) with an additional educational-use
-notice. See the `LICENSE` file for details.
+Copyright (c) 2026 dannyj1202. Released under the [MIT License](LICENSE) with an
+additional educational-use notice. See the `LICENSE` file for details.
+
+> The "MIT" in *MIT License* refers to the permissive open-source license that
+> originated at the Massachusetts Institute of Technology; it implies no
+> affiliation with the institution and is free for anyone to apply to their own
+> work.
